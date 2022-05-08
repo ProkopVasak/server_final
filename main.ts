@@ -54,11 +54,12 @@ input.onButtonPressed(Button.A, function vysledky() {
     let hlas2: number;
     
     for (let i of list_cisla) {
-        while (list_cisla.length != list_cisla.length) {
+        while (list_cisla.length != counter) {
             if (list_cisla[i] != pouzite_cisla[counter]) {
                 counter += 1
             } else {
-                break
+                _py.py_array_pop(list_cisla, i)
+                _py.py_array_pop(hlasy, i)
             }
             
         }

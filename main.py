@@ -44,10 +44,12 @@ radio.on_received_value(on_received_value)
 def vysledky():
     global a, b, c, d, list_cisla, hlasy, pouzite_cisla, counter
     for i in list_cisla:
-        while len(list_cisla) != len(list_cisla): 
+        while len(list_cisla) != counter: 
             if list_cisla[i] != pouzite_cisla[counter]:
                 counter += 1
-            else: break    
+            else: 
+                list_cisla.pop(i)
+                hlasy.pop(i)
         for g in list_cisla:
             pouzite_cisla.append(list_cisla[i])    
             if list_cisla[i] == list_cisla[g]:
