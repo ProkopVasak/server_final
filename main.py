@@ -50,6 +50,7 @@ def vysledky():
             else: 
                 list_cisla.pop(i)
                 hlasy.pop(i)
+            counter = 0    
         for g in list_cisla:
             pouzite_cisla.append(list_cisla[i])    
             if list_cisla[i] == list_cisla[g]:
@@ -67,11 +68,12 @@ def vysledky():
 input.on_button_pressed(Button.A, vysledky)
 
 def reset():
-    global a, b, c, d, hlasy
+    global a, b, c, d, hlasy, list_cisla, pouzite_cisla
     a = 0
     b = 0
     c = 0
     d = 0
-    seriova_cisla = []
-    hlasy = []
+    list_cisla = [control.device_serial_number()]
+    hlasy = [0]
+    pouzite_cisla = [control.device_serial_number()]
 input.on_button_pressed(Button.AB, reset)

@@ -62,6 +62,7 @@ input.onButtonPressed(Button.A, function vysledky() {
                 _py.py_array_pop(hlasy, i)
             }
             
+            counter = 0
         }
         for (let g of list_cisla) {
             pouzite_cisla.push(list_cisla[i])
@@ -88,6 +89,7 @@ input.onButtonPressed(Button.AB, function reset() {
     b = 0
     c = 0
     d = 0
-    let seriova_cisla = []
-    hlasy = []
+    list_cisla = [control.deviceSerialNumber()]
+    hlasy = [0]
+    pouzite_cisla = [control.deviceSerialNumber()]
 })
