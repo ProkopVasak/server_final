@@ -50,6 +50,8 @@ def vysledky():
             else: 
                 list_cisla.pop(i)
                 hlasy.pop(i)
+                list_cisla.insert(i, 0)
+                hlasy.insert(i, 0)
             counter = 0    
         for g in list_cisla:
             pouzite_cisla.append(list_cisla[i])    

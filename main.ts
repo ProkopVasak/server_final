@@ -60,6 +60,8 @@ input.onButtonPressed(Button.A, function vysledky() {
             } else {
                 _py.py_array_pop(list_cisla, i)
                 _py.py_array_pop(hlasy, i)
+                list_cisla.insertAt(i, 0)
+                hlasy.insertAt(i, 0)
             }
             
             counter = 0
